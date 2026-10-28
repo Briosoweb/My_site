@@ -1,0 +1,407 @@
+/* Variáveis de Cores (Estilo Premium) */
+:root {
+    --cor-fundo: #fcfaf8;         /* Branco creme muito suave */
+    --cor-texto-escuro: #3e1f0b;  /* Castanho café muito escuro */
+    --cor-texto-claro: #6b5a4f;   /* Castanho acinzentado para parágrafos */
+    --cor-laranja: #800020;       /* Laranja vibrante */
+    --cor-laranja-claro: #fbece3; /* Fundo da badge */
+    --cor-branco: #ffffff;
+    
+    /* Tipografia */
+    --font-titulos: 'Playfair Display', serif;
+    --font-texto: 'Inter', sans-serif;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-claro);
+    font-family: var(--font-texto);
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Efeitos de Fundo (Glow) */
+.bg-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(249, 219, 187, 0.4) 0%, rgba(255,255,255,0) 70%);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.glow-left {
+    top: -100px;
+    left: -200px;
+}
+
+.glow-right {
+    top: 200px;
+    right: -200px;
+    background: radial-gradient(circle, rgba(245, 230, 200, 0.5) 0%, rgba(255,255,255,0) 70%);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Tipografia Geral */
+h1, h2, h3 {
+    font-family: var(--font-titulos);
+    color: var(--cor-texto-escuro);
+    font-weight: 700;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Navegação */
+header {
+    padding: 20px 0;
+    position: absolute; /* Para ficar sobre o fundo com glow */
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--cor-texto-escuro);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--cor-laranja);
+}
+
+.btn-nav {
+    background-color: var(--cor-texto-escuro);
+    color: var(--cor-branco) !important;
+    padding: 10px 24px;
+    border-radius: 50px;
+}
+
+.btn-nav:hover {
+    background-color: var(--cor-laranja);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--cor-texto-escuro);
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge {
+    background-color: var(--cor-laranja-claro);
+    color: var(--cor-laranja);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+.hero h1 .highlight {
+    color: var(--cor-laranja);
+    font-style: italic;
+    font-weight: 600;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Botões Globais */
+.btn {
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-dark {
+    background-color: var(--cor-texto-escuro);
+    color: var(--cor-branco);
+}
+
+.btn-dark:hover {
+    background-color: var(--cor-laranja);
+    color: var(--cor-branco);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--cor-texto-escuro);
+    border: 1px solid #dcd3cb;
+}
+
+.btn-outline:hover {
+    border-color: var(--cor-texto-escuro);
+}
+
+/* Secção Sobre Mim */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Portfólio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.portfolio-card {
+    background: var(--cor-branco);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: transform 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.link-project {
+    color: var(--cor-laranja);
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Contactos */
+.contact {
+    background-color: var(--cor-branco);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 16px;
+    border: 1px solid #eae2db;
+    border-radius: 8px;
+    font-family: var(--font-texto);
+    font-size: 1rem;
+    background-color: var(--cor-fundo);
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--cor-laranja);
+}
+/* Secção Processo de Trabalho */
+.process-subtitle {
+    text-align: center;
+    margin: 0 auto 3rem auto;
+    max-width: 600px;
+    font-size: 1.1rem;
+}
+
+.process-note {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* Estilo específico para os cartões de processo (sem imagem) */
+.process-card {
+    border-top: 4px solid var(--cor-laranja);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.process-card h3 {
+    color: var(--cor-laranja);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--cor-texto-claro);
+    font-size: 0.9rem;
+}
+
+/* Responsividade (Telemóveis e Tablets) */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+    }
+    
+    .about-image, .about-text {
+        flex: 1;
+    }
+
+    .portfolio-grid, .contact-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .nav-links {
+        display: none; /* Esconde menu no telemóvel para usar JS */
+    }
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--cor-branco);
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    
+    .hamburger {
+        display: block;
+    }
+}
